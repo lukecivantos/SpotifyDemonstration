@@ -38,3 +38,7 @@ rect:hover{
   width: 150px;
   border-radius: 5px;
 }
+
+#space {
+  height: 800px;
+}
