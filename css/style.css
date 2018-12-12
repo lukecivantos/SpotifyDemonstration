@@ -40,6 +40,8 @@ rect:hover{
   height: 60px;
   width: 150px;
   border-radius: 5px;
+  box-shadow: 1px 5px 8px 0px #888888;
+
 }
 
 #space {
@@ -57,9 +59,6 @@ h4 {
   margin-top: 10px;
 }
 
-#1 {
-  box-shadow: 0px 2px 50px grey;
-}
 
 #contentArea {
   max-height: 400px;
@@ -68,5 +67,4 @@ h4 {
 #scrollArea {
   max-height: 400px;
 }
-
 
