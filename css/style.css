@@ -61,7 +61,12 @@ h4 {
   box-shadow: 0px 2px 50px grey;
 }
 
+#contentArea {
+  max-height: 400px;
+}
 
-
+#scrollArea {
+  max-height: 400px;
+}
 
 

@@ -56,7 +56,7 @@ function getPlaylist(i) {
     console.log(firstVariable);
     // JavaScript
     var rows = firstVariable.map(function (d) {
-        return '<tr><strong>' + d[0] + '</strong></tr>'
+        return '<tr><strong>' + d[0] + " by " +  d[1]  + '</strong></tr>'
     });
 
 
@@ -78,7 +78,7 @@ function getPlaylist(i) {
     console.log(secondVariable);
     // JavaScript
     var recommended = secondVariable.map(function (d) {
-        return '<tr><strong>' + d[0] + '</strong></tr>'
+        return '<tr><strong>' + d[0] + " by " +  d[1] + '</strong></tr>'
     });
 
 
