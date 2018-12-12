@@ -7,6 +7,7 @@
 		<title>CS109 - Spotify</title>
 
 		<!-- Load CSS libraries -->
+        <link href="css/clusterize.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
@@ -46,11 +47,11 @@
 		<br>
 		<div id="chart-area">
 			<div class="row">
-				<div class="col-md-6" style="text-align:center">
+				<div class="col-md-4" style="text-align:center">
 					<h3>Pick a Playlist By Name:</h3>
 					<svg width="500" height="500">
 						<g>
-							<rect x="30" y="20" rx="5" ry="5" height="80" width="440" fill="#1db954" ></rect>
+							<rect x="30" y="20" rx="5" ry="5" height="80" width="440" fill="#1db954" onclick="getFirst()" ></rect>
 							<text id="1" x="40" y="40" dy=".55em" font-size="22px">Playlist 1</text>
 						</g>
 						<g>
@@ -71,7 +72,28 @@
 						</g>
 					</svg>
 				</div>
-				<div class="col-md-6">
+                <div class="col-md-4">
+                    <!--HTML-->
+                    <div class="clusterize">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Songs in playlist</th>
+                            </tr>
+                            </thead>
+                        </table>
+                        <div id="scrollArea" class="clusterize-scroll">
+                            <table>
+                                <tbody id="contentArea" class="clusterize-content">
+                                <tr class="clusterize-no-data">
+                                    <td>Choose Playlist to Load Data…</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+				<div class="col-md-4">
 					<h3 style="text-align:center">Recommended Songs:</h3>
 				</div>
 			</div>
@@ -83,6 +105,7 @@
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/d3.min.js"></script>
+    <script src="js/clusterize.min.js"></script>
 
 	<script src="js/main.js"></script>
 	</body>

@@ -1,6 +1,7 @@
 
 
 var data;
+var fiveRandomMembers;
 
 d3.csv("data/playlistExample.csv", function(d){
     data = d
@@ -28,7 +29,7 @@ function getPlaylists() {
 
     console.log(data);
 
-    var fiveRandomMembers = getRandomSubarray(data, 5);
+    fiveRandomMembers = getRandomSubarray(data, 5);
 
     for (i = 0; i < 5; i++)
     {
@@ -37,5 +38,43 @@ function getPlaylists() {
 
     $('#chart-area').css('visibility','visible').hide().fadeIn(2000);
 }
+
+
+function getFirst() {
+    var firstVariable = fiveRandomMembers[0].playlist.split("'), ");
+    firstVariable = firstVariable.map(function (d) {
+        var x = d.split(', ');
+        x[1] = x[1].substr(1);
+
+        return x
+    });
+
+    console.log(firstVariable);
+    // JavaScript
+    var rows = firstVariable.map(function (d) {
+        return '<tr>' + d + '</tr>'
+    });
+
+    var clusterize = new Clusterize({
+        rows: rows,
+        scrollId: 'scrollArea',
+        contentId: 'contentArea'
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
