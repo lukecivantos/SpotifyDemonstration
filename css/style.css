@@ -44,6 +44,20 @@ rect:hover{
 
 }
 
+#refresh {
+  width: 15px;
+}
+
+#refreshSection {
+  margin-top: 2px;
+  visibility: hidden;
+}
+
+#getNew {
+  display: inline;
+  font-size: 18px;
+  vertical-align: middle;
+}
 #space {
   height: 800px;
 }
@@ -67,4 +81,6 @@ h4 {
 #scrollArea {
   max-height: 400px;
 }
+
+
 

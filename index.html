@@ -54,23 +54,23 @@
 					<svg width="100%" height="500">
 						<g>
 							<rect x="20" y="20" rx="5" ry="5" height="80" width="92%" fill="#2CE28C" onclick="getPlaylist(0)" ></rect>
-							<text id="0" x="40" y="40" dy=".55em" font-size="25px">Playlist 1</text>
+							<text id="0" x="40" y="40" dy=".55em" font-size="25px" onclick="getPlaylist(0)">Playlist 1</text>
 						</g>
 						<g>
 							<rect x="20" y="110" rx="5" ry="5" height="80" width="92%" fill="#2CE28C" onclick="getPlaylist(1)"></rect>
-							<text id="1" x="40" y="130" dy=".55em" font-size="25px">Playlist 1</text>
+							<text id="1" x="40" y="130" dy=".55em" font-size="25px" onclick="getPlaylist(1)">Playlist 1</text>
 						</g>
 						<g>
 							<rect x="20" y="200" rx="5" ry="5" height="80" width="92%" fill="#2CE28C" onclick="getPlaylist(2)"></rect>
-							<text id="2" x="40" y="220" dy=".55em" font-size="25px">Playlist 1</text>
+							<text id="2" x="40" y="220" dy=".55em" font-size="25px" onclick="getPlaylist(2)">Playlist 1</text>
 						</g>
 						<g>
 							<rect x="20" y="290" rx="5" ry="5" height="80" width="92%" fill="#2CE28C" onclick="getPlaylist(3)"></rect>
-							<text id="3" x="40" y="310" dy=".55em" font-size="25px">Playlist 1</text>
+							<text id="3" x="40" y="310" dy=".55em" font-size="25px" onclick="getPlaylist(3)">Playlist 1</text>
 						</g>
 						<g>
 							<rect x="20" y="380" rx="5" ry="5" height="80" width="92%" fill="#2CE28C" onclick="getPlaylist(4)"></rect>
-							<text id="4" x="40" y="400" dy=".55em" font-size="25px">Playlist 1</text>
+							<text id="4" x="40" y="400" dy=".55em" font-size="25px" onclick="getPlaylist(4)">Playlist 1</text>
 						</g>
 					</svg>
 				</div>
@@ -116,6 +116,10 @@
 							</table>
 						</div>
 					</div>
+                    <div id="refreshSection" onclick="refreshPlaylist()">
+                        <img src="img/refresh.svg" id="refresh" >
+                        <p id="getNew">Get New Predictions</p>
+                    </div>
 				</div>
 			</div>
 		</div>
