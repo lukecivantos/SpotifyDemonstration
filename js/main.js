@@ -40,25 +40,59 @@ function getPlaylists() {
 }
 
 
-function getFirst() {
-    var firstVariable = fiveRandomMembers[0].playlist.split("'), ");
+function getPlaylist(i) {
+    var firstVariable = fiveRandomMembers[i].playlist.split("'), ");
     firstVariable = firstVariable.map(function (d) {
         var x = d.split(', ');
-        x[1] = x[1].substr(1);
-
+        x = [x[0].replace('(', ''), x[1].replace('(','')];
+        x = [x[0].replace(')', ''), x[1].replace(')','')];
+        x = [x[0].replace("'", ''), x[1].replace("'",'')];
+        x = [x[0].replace("'", ''), x[1].replace("'",'')];
+        x = [x[0].replace('"', ''), x[1].replace('"','')];
+        x = [x[0].replace("[", ''), x[1].replace("]",'')];
         return x
     });
 
     console.log(firstVariable);
     // JavaScript
     var rows = firstVariable.map(function (d) {
-        return '<tr>' + d + '</tr>'
+        return '<tr><strong>' + d[0] + '</strong></tr>'
     });
+
+
+
+
+
+    var secondVariable = fiveRandomMembers[i].predictions.split("'), ");
+    secondVariable = secondVariable.map(function (d) {
+        var x = d.split(', ');
+        x = [x[0].replace('(', ''), x[1].replace('(','')];
+        x = [x[0].replace(')', ''), x[1].replace(')','')];
+        x = [x[0].replace("'", ''), x[1].replace("'",'')];
+        x = [x[0].replace("'", ''), x[1].replace("'",'')];
+        x = [x[0].replace('"', ''), x[1].replace('"','')];
+        x = [x[0].replace("[", ''), x[1].replace("]",'')];
+        return x
+    });
+
+    console.log(secondVariable);
+    // JavaScript
+    var recommended = secondVariable.map(function (d) {
+        return '<tr><strong>' + d[0] + '</strong></tr>'
+    });
+
+
 
     var clusterize = new Clusterize({
         rows: rows,
         scrollId: 'scrollArea',
         contentId: 'contentArea'
+    });
+
+    var clusterize2 = new Clusterize({
+        rows: recommended,
+        scrollId: 'scrollArea2',
+        contentId: 'contentArea2'
     });
 }
 
